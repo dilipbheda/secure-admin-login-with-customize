@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Secure Admin Login With Customize\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-17 15:26+0000\n"
+"PO-Revision-Date: 2018-01-17 15:26+0000\n"
+"Last-Translator: admin <bhedadilip8462@gmail.com>\n"
+"Language-Team: Hindi\n"
+"Language: hi-IN\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:646
+msgid "Font Size ( Example: 15px )"
+msgstr "फ़ॉन्ट आकार (उदाहरण: 15px)"
+
+#: admin/captcha/class-secure-admin-login-with-customize-captcha.php:80
+msgid "The request is invalid or malformed."
+msgstr "अनुरोध अमान्य या गलत है।"
+
+#: admin/captcha/class-secure-admin-login-with-customize-captcha.php:83
+#: admin/captcha/class-secure-admin-login-with-customize-captcha.php:103
+msgid "Invalid captcha code. Try again."
+msgstr "अमान्य कैप्टचा कोड. पुनः प्रयास करें."
+
+#: admin/captcha/class-secure-admin-login-with-customize-captcha.php:95
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:75
+msgid "Captcha Code"
+msgstr "कैप्चा कोड"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:20
+msgid "Customize Secure Login"
+msgstr "सुरक्षित लॉगिन कस्टमाइज़ करें"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:27
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:99
+msgid "Logo"
+msgstr "लोगो"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:35
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:235
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:391
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:662
+msgid "Background"
+msgstr "पृष्ठभूमि"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:43
+msgid "Login Form"
+msgstr "प्रवेश फार्म"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:51
+msgid "Input Fields"
+msgstr "इनपुट क्षेत्रों"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:59
+msgid "Error Message Format"
+msgstr "त्रुटि संदेश स्वरूप"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:67
+msgid "Google reCaptcha"
+msgstr "गूगल रीकैपचा"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:83
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:815
+msgid "Additional CSS"
+msgstr "अतिरिक्त सीएसएस"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:103
+msgid "You can change logo in login page"
+msgstr "आप लॉग इन पेज में लोगो बदल सकते हैं"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:119
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:275
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:354
+msgid "Width"
+msgstr "चौड़ाई"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:123
+msgid "Example: 50px"
+msgstr "उदाहरण: 50px"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:138
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:294
+msgid "Height"
+msgstr "ऊंचाई"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:142
+msgid "Example: 30px"
+msgstr "उदाहरण: 30px"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:157
+msgid "Padding Bottom"
+msgstr "पैडिंग नीचे"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:161
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:727
+msgid "Example: 10px"
+msgstr "उदाहरण: 10px"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:176
+msgid "Image"
+msgstr "छवि"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:180
+msgid "Change background image"
+msgstr "पृष्ठभूमि चित्र बदलें"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:197
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:411
+msgid "Color"
+msgstr "रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:201
+msgid "Change background color"
+msgstr "पृष्ठभूमि रंग बदलें"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:216
+msgid "Size"
+msgstr "आकार"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:220
+msgid "Set background size using css property"
+msgstr "css संपत्ति का उपयोग कर पृष्ठभूमि का आकार सेट करें"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:239
+msgid "Background Image"
+msgstr "पृष्ठभूमि छवि"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:259
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:666
+msgid "Background color"
+msgstr "पीछे का रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:279
+msgid "Example: 300px"
+msgstr "उदाहरण: 300px"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:298
+msgid "Example: 220px"
+msgstr "उदाहरण: 220px"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:313
+msgid "Padding"
+msgstr "गद्दी"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:317
+msgid "Example: 10px 10px 10px 10px"
+msgstr "उदाहरण: 10px 10px 10px 10px"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:331
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:683
+msgid "Border"
+msgstr "सीमा"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:335
+msgid "Example: 2px dotted black"
+msgstr "उदाहरण: 2px बिंदीदार काले"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:350
+msgid "Input Field"
+msgstr "इनपुट क्षेत्र"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:372
+msgid "Margin Example: 10px 10px 0 0"
+msgstr "मार्जिन उदाहरण: 10px 10px 0 0"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:431
+msgid "Label Color"
+msgstr "लेबल का रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:449
+msgid "Label Font Size"
+msgstr "लेबल का फ़ॉन्ट आकार"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:463
+msgid "Button"
+msgstr "बटन"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:467
+msgid "Font Size (Example: 10px)"
+msgstr "फ़ॉन्ट आकार (उदाहरण: 10 पीएक्स)"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:486
+msgid "Change background"
+msgstr "बैकग्राउंड बदलें"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:507
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:687
+msgid "Border color"
+msgstr "किनारे का रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:527
+msgid "Button hover effect color"
+msgstr "बटन हॉवर प्रभाव रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:547
+msgid "Border hover effect color"
+msgstr "बॉर्डर होवर प्रभाव रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:567
+msgid "Box Shadow"
+msgstr "डब्बे की छाया"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:587
+msgid "Button Color"
+msgstr "बटन रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:604
+msgid "Text"
+msgstr "टेक्स्ट"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:608
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:704
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:708
+msgid "Text color"
+msgstr "लिखावट का रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:628
+msgid "Text hover effect color"
+msgstr "पाठ हॉवर प्रभाव रंग"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:723
+msgid "Font Size"
+msgstr "फ़ॉन्ट आकार"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:742
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:797
+msgid "Enable/Disable"
+msgstr "सक्षम/अक्षम"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:760
+msgid "Site Key"
+msgstr "कार्यस्थल की कुंजी"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:764
+msgid "Enter google recaptcha site key"
+msgstr "गूगल रीकैप्चा साइट कुंजी दर्ज करें"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:778
+msgid "Secret Key"
+msgstr "गुप्त कुंजी"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:782
+msgid "Enter google recaptcha secret key"
+msgstr "गूगल रिकैप्चा गुप्त कुंजी दर्ज करें"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:885
+msgid "Please disable google recaptcha"
+msgstr "कृपया कर के गूगल रिकैप्चा अक्षम करे"
+
+#: admin/customizer/class-secure-admin-login-with-customize-customizer.php:895
+msgid "Please disable captcha code"
+msgstr "कृपया कर के कैप्चा कोड अक्षम करे"
+
+#. Name of the plugin
+msgid "Secure Admin Login With Customize"
+msgstr "अनुकूलित के साथ सुरक्षित व्यवस्थापक लॉगिन"
+
+#. Description of the plugin
+msgid ""
+"This plugin allows you to customize your WordPress admin login page within "
+"WordPress customizer."
+msgstr ""
+"यह प्लगइन आपको वर्डप्रेस कस्टमाइज़र के भीतर अपने वर्डप्रेस व्यवस्थापक लॉगिन "
+"पेज को कस्टमाइज़ करने की सुविधा देता है।"
+
+#. Author of the plugin
+msgid "Dilip Bheda"
+msgstr "दिलीप भेडा"

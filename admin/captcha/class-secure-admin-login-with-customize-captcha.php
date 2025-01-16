@@ -9,7 +9,7 @@ if ( ! class_exists( 'Secure_Login_Recaptcha' ) ) {
 		 *  Calling public __constructor.
 		 */
 		public function __construct() {
-			$recaptcha = get_option( 'secure_login_captcha_enable' ) ? 'google_captcha' : '' ;
+			$recaptcha      = get_option( 'secure_login_captcha_enable' ) ? 'google_captcha' : '';
 			$captcha_enable = empty( $recaptcha ) ? get_option( 'secure_login_captcha_code_enable' ) ? 'captcha_code' : '' : $recaptcha;
 			switch ( $captcha_enable ) {
 				case 'google_captcha':
@@ -18,22 +18,22 @@ if ( ! class_exists( 'Secure_Login_Recaptcha' ) ) {
 						$this->private_key = get_option( 'secure_login_captcha_secretkey' );
 						add_action( 'login_form', array( $this, 'secure_login_display' ) );
 						add_action( 'wp_authenticate_user', array( $this, 'secure_login_validate_captcha' ), 10, 2 );
-						add_action( 'login_enqueue_scripts', array( $this, 'secure_login_script') );
+						add_action( 'login_enqueue_scripts', array( $this, 'secure_login_script' ) );
 						add_action( 'login_footer', array( $this, 'secure_login_grecaptcha_execute' ) );
 					}
-				break;
+					break;
 				case 'captcha_code':
 					add_action( 'login_form', array( $this, 'secure_login_captchadisplay' ) );
 					add_action( 'wp_authenticate_user', array( $this, 'secure_login_captcha_validation' ), 10, 2 );
-					add_action( 'login_footer' , array( $this, 'secure_login_captcha_reload_js' ) );
+					add_action( 'login_footer', array( $this, 'secure_login_captcha_reload_js' ) );
 				default:
-				break;
+					break;
 			}
 		}
 
 		/**
-		* Add style
-		*/
+		 * Add style
+		 */
 		public function secure_login_script() {
 			wp_enqueue_script( 'safe-login-captcha', 'https://www.google.com/recaptcha/api.js' );
 		}
@@ -46,45 +46,53 @@ if ( ! class_exists( 'Secure_Login_Recaptcha' ) ) {
 		}
 
 		/**
-		* Captcha code display
-		*/
+		 * Captcha code display
+		 */
 		public function secure_login_display() {
 			echo '<div class="g-recaptcha" data-sitekey="' . $this->public_key . '" data-callback="safelogin" data-size="invisible"></div>';
 		}
 
 		/**
-		* Verify the captcha answer
-		*
-		* @param $user string login username
-		* @param $password string login password
-		*
-		* @return WP_Error|WP_user
-		*/
+		 * Verify the captcha answer
+		 *
+		 * @param $user string login username
+		 * @param $password string login password
+		 *
+		 * @return WP_Error|WP_user
+		 */
 		public function secure_login_validate_captcha( $user, $password ) {
 			if ( isset( $_POST['g-recaptcha-response'] ) ) {
-				$response = file_get_contents( 'https://www.google.com/recaptcha/api/siteverify', false, stream_context_create( array(
-					'http' => array(
-						'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-						'method'  => 'POST',
-						'content' => http_build_query( array(
-							'response' => $_POST['g-recaptcha-response'],
-							'secret' => $this->private_key,
-							'remoteip' => $_SERVER['REMOTE_ADDR']
-							) ),
-						),
-					) ) );
+				$response = file_get_contents(
+					'https://www.google.com/recaptcha/api/siteverify',
+					false,
+					stream_context_create(
+						array(
+							'http' => array(
+								'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+								'method'  => 'POST',
+								'content' => http_build_query(
+									array(
+										'response' => $_POST['g-recaptcha-response'],
+										'secret'   => $this->private_key,
+										'remoteip' => $_SERVER['REMOTE_ADDR'],
+									)
+								),
+							),
+						)
+					)
+				);
 				$response = json_decode( $response );
 				if ( $response->success ) {
 					return $user;
 				} else {
-					return new WP_Error( 'invalid_captcha', __( 'The request is invalid or malformed.', 'secure-admin-login-with-customize' ));
+					return new WP_Error( 'invalid_captcha', __( 'The request is invalid or malformed.', 'secure-admin-login-with-customize' ) );
 				}
 			} else {
 				return new WP_Error( 'invalid_captcha', __( 'Invalid captcha code. Try again.', 'secure-admin-login-with-customize' ) );
 			}
 		}
 
-		public function secure_login_captcha_reload_js() { 
+		public function secure_login_captcha_reload_js() {
 			echo '<script type="text/javascript">var reloadcaptcha=document.getElementById("reloadcaptcha");reloadcaptcha.addEventListener("click",function(){var t=document.getElementById("captcha");t.setAttribute("src",t.src+"?"+Math.random())});</script>';
 		}
 
@@ -98,8 +106,8 @@ if ( ! class_exists( 'Secure_Login_Recaptcha' ) ) {
 		}
 
 		public function secure_login_captcha_validation( $user, $password ) {
-			if ( isset( $_POST[ 'captchacode' ] ) ) {
-				if ( $_POST[ 'captchacode' ] != $_SESSION['captcha'] ) {
+			if ( isset( $_POST['captchacode'] ) ) {
+				if ( $_POST['captchacode'] != $_SESSION['captcha'] ) {
 					return new WP_Error( 'invalid_captcha', __( 'Invalid captcha code. Try again.', 'secure-admin-login-with-customize' ) );
 				} else {
 					return $user;
@@ -107,5 +115,5 @@ if ( ! class_exists( 'Secure_Login_Recaptcha' ) ) {
 			}
 		}
 	}
-	new Secure_Login_Recaptcha;
+	new Secure_Login_Recaptcha();
 }

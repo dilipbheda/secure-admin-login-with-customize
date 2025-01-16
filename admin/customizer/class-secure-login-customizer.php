@@ -1015,7 +1015,7 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 
 		/**
 		 * Captcha validation.
-		 * 
+		 *
 		 * @param string $validate validate.
 		 * @param string $value value.
 		 * @return string

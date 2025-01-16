@@ -1,8 +1,21 @@
-<?php session_start();
+<?php
+/**
+ * Generate captch code
+ *
+ * @package Secure_Login
+ */
+
+session_start();
 if ( ! class_exists( 'Secure_Login_Captcha_Code' ) ) {
+	/**
+	 * Summary of Secure_Login_Captcha_Code
+	 */
 	class Secure_Login_Captcha_Code {
 		/**
 		 * Calling public constructor.
+		 *
+		 * @param mixed $width captch width.
+		 * @param mixed $height captch height.
 		 */
 		public function __construct( $width, $height ) {
 			// Generate random string.
@@ -15,23 +28,23 @@ if ( ! class_exists( 'Secure_Login_Captcha_Code' ) ) {
 			imagecolorallocate( $image, 255, 255, 255 );
 			// Add captcha code font.
 			$font = '../fonts/Haziness.ttf';
-			// Font color
+			// Font color.
 			$fontcolor = imagecolorallocate( $image, 0, 0, 0 );
 			// Image line color.
-			$line_color = imagecolorallocate( $image, mt_rand( 0, 255 ), mt_rand( 0, 255 ), mt_rand( 0, 255 ) );
+			$line_color = imagecolorallocate( $image, rand( 0, 255 ), rand( 0, 255 ), rand( 0, 255 ) );
 			// Image pixel color.
-			$pixel_color = imagecolorallocate( $image, mt_rand( 0, 255 ), mt_rand( 0, 255 ), mt_rand( 0, 255 ) );
+			$pixel_color = imagecolorallocate( $image, rand( 0, 255 ), rand( 0, 255 ), rand( 0, 255 ) );
 			// Create image line using imageline function.
 			for ( $i = 0; $i < 10; $i++ ) {
-				imageline( $image, 0, mt_rand() % 50, 200, mt_rand() % 50, $line_color );
+				imageline( $image, 0, rand() % 50, 200, rand() % 50, $line_color );
 			}
 			// Set image pixel using imagesetpixel.
 			for ( $i = 0; $i < 1000; $i++ ) {
-				imagesetpixel( $image, mt_rand() % 200, mt_rand() % 50, $pixel_color );
+				imagesetpixel( $image, rand() % 200, rand() % 50, $pixel_color );
 			}
 			// Add text using imagettftext.
 			imagettftext( $image, 30, 10, 25, 45, $fontcolor, $font, $str );
-			// Set header
+			// Set header.
 			header( 'Content-type: image/png' );
 			// Image  type.
 			imagepng( $image );

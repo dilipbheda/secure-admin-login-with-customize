@@ -3,12 +3,12 @@ Plugin Name: Secure Admin Login With Customize
 Plugin URI: https://wordpress.org/plugins/secure-admin-login-with-customize/
 Author: Dilip Bheda
 Author URI: https://profiles.wordpress.org/dilipbheda
-Contributors: dilipbheda, girishpanchal
-Tags: custom admin login, custom login, custom wp-login, design wordpress login, custom login logo, login customizer, secure admin, wp-admin, protect wp admin,captcha, recaptcha
-Requires at least: 4.4
-Tested up to: 5.9
-Requires PHP: 5.6.33
-Stable tag: 1.3
+Contributors: dilipbheda, girishpanchal, jdahir0789
+Tags: custom admin login, custom wp-login, customise wordpress login, custom login logo, login customizer
+Requires at least: 5.9
+Tested up to: 6.7
+Requires PHP: 7.2
+Stable tag: 1.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 

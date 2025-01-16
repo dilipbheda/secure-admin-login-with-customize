@@ -1,5 +1,14 @@
 <?php
+/**
+ * Main class for custimizer setting
+ *
+ * @package Secure_Login
+ */
+
 if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
+	/**
+	 * Customizer fields
+	 */
 	class Secure_Login_Customizer {
 		/**
 		 * Calling public constructor.
@@ -11,7 +20,7 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 		/**
 		 * Register Secure Login Customize in WordPress Customizer.
 		 *
-		 * @argument 'wp_customize'
+		 * @param mixed $wp_customize customizer.
 		 */
 		public function secure_login_customize_register( $wp_customize ) {
 			$wp_customize->add_panel(
@@ -937,11 +946,11 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 		 *
 		 * @see wp_check_filetype() https://developer.wordpress.org/reference/functions/wp_check_filetype/
 		 *
-		 * @param string               $image Image filename.
-		 * @param WP_Customize_Setting $setting Setting instance.
+		 * @param string $image Image filename.
+		 * @param mixed  $setting WP_Customize_Setting Setting instance.
 		 * @return string The image filename if the extension is allowed; otherwise, the setting default.
 		 */
-		function secure_login_sanitize_image( $image, $setting ) {
+		public function secure_login_sanitize_image( $image, $setting ) {
 			/*
 			 * Array of valid image file types.
 			 *
@@ -963,6 +972,8 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 
 		/**
 		 * Senitize checkbox fields.
+		 *
+		 * @param string $value checkbox value.
 		 */
 		public function secure_login_sanitize_checkbox( $value ) {
 			return $value;
@@ -970,6 +981,9 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 
 		/**
 		 * Senitize input field.
+		 *
+		 * @param string $value field value.
+		 * @return string
 		 */
 		public function secure_login_sanitize_string( $value ) {
 			return sanitize_text_field( $value );
@@ -977,6 +991,9 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 
 		/**
 		 * Sanitize textarea field.
+		 *
+		 * @param string $value texarea value.
+		 * @return string
 		 */
 		public function secure_login_sanitize_textarea( $value ) {
 			return sanitize_textarea_field( $value );
@@ -984,6 +1001,10 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 
 		/**
 		 * Google recaptcha validation.
+		 *
+		 * @param string $validate validate.
+		 * @param string $value value.
+		 * @return string
 		 */
 		public function secure_login_captcha_validation( $validate, $value ) {
 			if ( ( get_option( 'secure_login_captcha_enable' ) ) && ( ! empty( $value ) ) ) {
@@ -994,6 +1015,10 @@ if ( ! class_exists( 'Secure_Login_Customizer' ) ) {
 
 		/**
 		 * Captcha validation.
+		 *
+		 * @param string $validate validate.
+		 * @param string $value value.
+		 * @return string
 		 */
 		public function secure_login_recaptcha_validation( $validate, $value ) {
 			if ( ( get_option( 'secure_login_captcha_code_enable' ) ) && ( ! empty( $value ) ) ) {
